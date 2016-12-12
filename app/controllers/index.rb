@@ -11,6 +11,8 @@ end
 # QUE HACER?: Convierte esta ruta para que utilice Ajax y si la petición no es
 # de Ajax de igual forma sirva.
 post '/rolls' do
+
+  @rolls = []
   if params[:value]
     3.times { @rolls << Roll.create({ value: value }) }
   else
